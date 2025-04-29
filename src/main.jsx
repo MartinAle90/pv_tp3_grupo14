@@ -1,10 +1,11 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 //import './index.css'
-import ArrayObjetos from './assets/components/ArrayObjetos.jsx'
+import Producto from './assets/components/Producto.jsx'
 
 createRoot(document.getElementById('root')).render(
-  
-    <ArrayObjetos />
-  
+    <StrictMode>
+        <Producto />    
+    </StrictMode>
+
 )
