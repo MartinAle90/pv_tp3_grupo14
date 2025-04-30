@@ -1,36 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import './assets/components/Producto.jsx'
+import { useState } from 'react';
+import TaskInput from './components/TaskInput';
+import TaskList from './components/TaskList';
+import Producto from './components/Producto';
+import Tarea from './components/Tarea';
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  
+  const [tasks, setTasks] = useState([]);
+
+  const addTask = (text) => {
+    const newTask = { id: Date.now(), text, completed: false };
+    setTasks([newTask, ...tasks]);
+  };
+
+  const toggleTask = (id) => {
+    setTasks(tasks.map(task =>
+      task.id === id ? { ...task, completed: !task.completed } : task
+    ));
+  };
+
+  const deleteTask = (id) => {
+    setTasks(tasks.filter(task => task.id !== id));
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>Producto.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="app">
+      <h1>Lista de Tareas</h1>
+      <TaskInput onAdd={addTask} />
+      <TaskList tasks={tasks} onToggle={toggleTask} onDelete={deleteTask} />
+
+      <h1>Ejercicio Integrado</h1>
+      <Producto /> 
+      <hr />
+      <Tarea />     
+    </div>
+  );
 }
 
-export default App
+export default App;
+
