@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./TaskItem.css";
 
 export default function TaskItem({ title, onDelete }) {
   const [done, setDone] = useState(false);

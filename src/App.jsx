@@ -1,11 +1,11 @@
-import "./App.css";
-import TaskMain from "./components/TaskMain";
+import "./assets/CSS/App.css";
+import Tasks from './assets/components/Tasks'
 
 function App() {
 
   return (
     <>
-      <TaskMain />
+      <Tasks />
     </>
   );
 }

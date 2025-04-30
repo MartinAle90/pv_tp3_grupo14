@@ -1,8 +1,9 @@
 import TaskList from "./TaskList";
 import TaskInput from "./TaskInput";
 import { useState } from "react";
+import "../CSS/Tasks.css";
 
-function TaskMain() {
+function Tasks() {
   const [tasks, setTasks] = useState([]);
 
   function addTask(title) {
@@ -29,4 +30,4 @@ function TaskMain() {
   );
 }
 
-export default TaskMain;
+export default Tasks;
