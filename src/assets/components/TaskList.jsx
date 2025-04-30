@@ -1,3 +1,4 @@
+
 import TaskItem from './TaskItem';
 
 const TaskList = ({ tasks, onToggle, onDelete }) => {
@@ -9,11 +10,13 @@ const TaskList = ({ tasks, onToggle, onDelete }) => {
           task={task}
           onToggle={onToggle}
           onDelete={onDelete}
+
         />
       ))}
     </ul>
   );
 }
+
 
 export default TaskList;
 

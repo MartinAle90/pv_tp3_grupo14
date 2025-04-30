@@ -1,10 +1,23 @@
-const TaskItem = ({ task, onToggle, onDelete }) => {
+
+import { useState } from "react";
+
+export default function TaskItem({ title, onDelete }) {
+  const [done, setDone] = useState(false);
+
+  const toggleDone = () => {
+    setDone(!done);
+  };
+
   return (
-    <li style={{ textDecoration: task.completed ? 'line-through' : 'none' }}>
-      <span onClick={() => onToggle(task.id)}>{task.text}</span>
-      <button onClick={() => onDelete(task.id)}>Eliminar</button>
+    <li className={done ? "rayada" : "normal"}>
+      {title}
+      <div>
+        <button onClick={toggleDone}>
+          {done ? "Rehacer" : "Realizar"}
+        </button>
+        <button onClick={onDelete}>Eliminar</button>
+      </div>
     </li>
   );
 }
 
-export default TaskItem

@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 
 function TaskInput({ onAdd }) {
@@ -11,10 +12,12 @@ function TaskInput({ onAdd }) {
     }
   };
 
+
   return (
     <form onSubmit={handleSubmit}>
       <input
         type="text"
+
         value={text}
         onChange={(e) => setText(e.target.value)}
         placeholder="Nueva tarea"
@@ -25,3 +28,4 @@ function TaskInput({ onAdd }) {
 }
 
 export default TaskInput;
+
