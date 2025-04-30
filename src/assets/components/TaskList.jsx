@@ -1,15 +1,22 @@
-import TaskItem from "./TaskItem";
 
-export default function TaskList({ tasks, onDelete }) {
+import TaskItem from './TaskItem';
+
+const TaskList = ({ tasks, onToggle, onDelete }) => {
   return (
     <ul>
-      {tasks.map((task) => (
+      {tasks.map(task => (
         <TaskItem
           key={task.id}
-          title={task.title}
-          onDelete={() => onDelete(task.id)}
+          task={task}
+          onToggle={onToggle}
+          onDelete={onDelete}
+
         />
       ))}
     </ul>
   );
 }
+
+
+export default TaskList;
+

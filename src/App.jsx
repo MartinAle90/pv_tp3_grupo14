@@ -1,8 +1,9 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './assets/components/Producto.jsx'
-import "./assets/CSS/App.css";
+
+import { useState } from 'react';
+import TaskInput from './components/TaskInput';
+import TaskList from './components/TaskList';
+import Producto from './components/Producto';
+import Tarea from './components/Tarea';
 import Tasks from './assets/components/Tasks'
 
 
@@ -14,7 +15,9 @@ function App() {
       <TP3_PV_Grupo14 />
 
     </>
+
   );
 }
 
 export default App;
+

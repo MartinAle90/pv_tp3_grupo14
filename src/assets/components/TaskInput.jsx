@@ -1,24 +1,31 @@
-import { useState } from "react";
 
-export default function TaskInput({ onAdd }) {
-  const [inputValue, setinputValue] = useState("");
+import { useState } from 'react';
 
-  function handleSubmit(e) {
+function TaskInput({ onAdd }) {
+  const [text, setText] = useState('');
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    onAdd(inputValue);
-    setinputValue("");
-  }
+    if (text.trim()) {
+      onAdd(text);
+      setText('');
+    }
+  };
+
 
   return (
     <form onSubmit={handleSubmit}>
       <input
         type="text"
-        placeholder="Ej: Sacar la basura"
-        value={inputValue}
-        onChange={(e) => setinputValue(e.target.value)}
-      />
 
-      <button>Crear tarea</button>
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        placeholder="Nueva tarea"
+      />
+      <button type="submit">Agregar</button>
     </form>
   );
 }
+
+export default TaskInput;
+
