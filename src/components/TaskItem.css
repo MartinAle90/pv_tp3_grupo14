@@ -1,0 +1,32 @@
+.normal {
+    text-decoration: none;
+}
+
+.rayada {
+    text-decoration: line-through;
+    text-decoration-color: red;
+    text-decoration-thickness: 2px;
+}
+
+.eliminado {
+    display: none;
+}
+
+div {
+    display: inline;
+    margin-left: 20px;
+}
+div > button {
+    margin: 1%;
+    width: 100px;
+}
+
+ul {
+width: 100%;
+}
+
+input {
+    margin-right: 5%;
+    height: 30px;
+    width: 200px;
+}
