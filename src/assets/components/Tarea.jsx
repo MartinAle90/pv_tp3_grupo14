@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import '../assets/css/tareas.css';
 
 const Tarea = () => {
   const [tareas, setTareas] = useState([]);
