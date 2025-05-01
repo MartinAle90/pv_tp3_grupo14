@@ -1,14 +1,9 @@
 
-
 function App() {
-
   return (
     <>
-
       <TP3_PV_Grupo14 />
-
     </>
-
   );
 }
 
