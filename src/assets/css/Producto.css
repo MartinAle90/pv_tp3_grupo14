@@ -1,44 +1,78 @@
 h1 {
   color: darkblue;
   text-align: center;
-  text-shadow: 15px 2px 4px rgba(0, 0, 0, 0.4);
-}
-
-table {
-
-  margin-bottom: 20px;
-  border-collapse: collapse;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  background-color: #e3eafc;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 h3 {
   color: #1976d2;
   text-align: center;
-  text-shadow: 15px 2px 4px rgba(0, 0, 0, 0.4);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  margin-top: 30px;
 }
 
-th,
-td {
+ul {
+  list-style-type: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+  background-color: #467ef0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+ul li {
   padding: 10px;
-  text-align: left;
+  border-bottom: 1px solid #ccc;
 }
 
-th {
-  background-color: #435dcf;
+ul li:last-child {
+  border-bottom: none;
 }
 
-table {
+form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px auto;
+  flex-wrap: wrap;
+  max-width: 600px;
+}
+
+input[type="text"],
+input[type="number"] {
+  padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  overflow: hidden;
-  background-color: #1976d2;
+  width: 140px;
 }
 
 button {
-  margin: 10px;
+  margin: 10px 5px;
   padding: 8px 12px;
   background-color: #1976d2;
   color: white;
   border: none;
   cursor: pointer;
   border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #145ea8;
+}
+
+div {
+  color: darkblue;
+  float: right; 
+  text-align: right;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  background-color: #e3eafc;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }

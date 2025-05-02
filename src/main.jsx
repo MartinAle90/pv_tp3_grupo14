@@ -10,6 +10,6 @@ import './assets/css/Producto.css'
 createRoot(document.getElementById('root')).render(
     <StrictMode>
         <Producto/>
-        <Tarea/>
+      <Tarea/>
     </StrictMode>
 )
